@@ -27,6 +27,15 @@ app.get("/about", function(req, res){
   res.render("about", {content: aboutContent});
 });
 
+app.get("/compose", function(req, res){
+  res.render("compose");
+});
+
+app.post("/compose", function(req, res){
+  console.log(req.body.blogTitle);
+  // res.render("compose");
+});
+
 
 
 
