@@ -81,11 +81,10 @@ app.post("/compose", function(req, res){
     title: postTitle,
     body: postBody 
   });
-  const post = {
-    title: req.body.postTitle,
-    body: req.body.postBody
-  };
-  posts.push(post);
+  postDB.save()
+  .then(()=>{
+    console.log("Post is successfully added.");
+  });
   res.redirect("/");
 });
 
