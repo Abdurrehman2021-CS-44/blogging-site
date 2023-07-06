@@ -66,11 +66,14 @@ app.get("/compose", function(req, res){
 });
 
 app.get("/posts/:postName", function(req, res){
-  posts.forEach(function(post){
-    if(_.lowerCase(post.title) === _.lowerCase(req.params.postName)){
-      // console.log("Match found!");
-      res.render("post", {postTitle: post.title, postBody: post.body});
-    }
+  Post.find({})
+  .then((list)=>{
+    list.forEach(function(post){
+      if(post._id == req.params.postName){
+        console.log("Match found!");
+        res.render("post", {postTitle: post.title, postBody: post.body});
+      }
+    });
   });
 });
 
