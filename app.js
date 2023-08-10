@@ -1,5 +1,4 @@
 //jshint esversion:6
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -14,7 +13,7 @@ const app = express();
 
 mongoose.connect("mongodb://127.0.0.1:27017/postsDB")
 .then(()=>{
-  console.log("Connected");
+  console.log("Database connected");
 });
 
 const postSchema = new mongoose.Schema({
@@ -81,5 +80,5 @@ app.post("/compose", function(req, res){
 });
 
 app.listen(3000, function() {
-  console.log("Server started on port 3000");
+  console.log("Server started on port 3000.");
 });

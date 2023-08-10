@@ -1,3 +1,7 @@
+body{
+    position: relative;
+}
+
 .container-fluid {
     padding-top: 70px !important;
     padding-bottom: 70px !important;
@@ -35,4 +39,8 @@
 	margin-top: 25px !important;
 	font-size: 12px;
     color: #fff;
+}
+
+.for-spacing {
+    height: 90px;
 }
