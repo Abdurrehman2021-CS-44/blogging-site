@@ -15,15 +15,18 @@
     color: #1abc9c !important;
 }
 
+.blogs {
+    margin-bottom: 100px;
+}
+
 .footer-padding {
-	padding-bottom: 60px !important;
-    position: relative;
+    position: fixed;
     bottom: 0;
+    width: 100%;
 }
 
 .footer {
 	text-align: center;
-	width: 100%;
 	background-color: #1abc9c;
     padding: 10px 0;
 }
